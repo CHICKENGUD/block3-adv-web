@@ -56,4 +56,5 @@
     }
 
     $testrectangle = new Rectangle(69, 420);
+    echo $testrectangle->getArea();
 ?>
