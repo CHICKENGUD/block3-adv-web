@@ -8,6 +8,8 @@
 <body>
 
     The dashboard AYAYA
+
+    <a href="index.php?controller=logout">logout</a>
     
 </body>
 </html>
