@@ -8,7 +8,7 @@
 <body>
 <h1> welcome </h1>
 
-<?php require_once (controllers/controller.php); ?>
+<?php require_once ('controllers/controller.php'); ?>
 
 </body>
 </html>
