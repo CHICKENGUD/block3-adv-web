@@ -26,6 +26,7 @@ class Distributor extends Supplier {
 
 class Food extends Distributor {
   - foodType()
+  - foodID()
   - cost()
   - distributor()
   _construct()
