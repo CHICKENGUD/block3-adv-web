@@ -1,0 +1,83 @@
+@startuml
+class Supplier {
+  + name: Saputo
+  + supplyFood() 
+  + netincome()
+  + sell()
+}
+
+class Distributor extends Supplier {
+  + name: Costco
+  + orderFood()
+  + distributeFood()
+  + netincome
+}
+
+class Food {
+  - yummy()
+  + cost()
+}
+
+class Meat extends Food {
+  - yummy() 
+  + cost()
+}
+
+class Chicken extends Meat {
+  -yummy()
+  -cookingTemp()
+  + cost()
+}
+
+class Beef extends Meat {
+  -yummy()
+  -cookingTemp()
+  + cost()
+}
+
+class Pork extends Meat {
+  -yummy()
+  -cookingTemp()
+  + cost()
+}
+
+class Veggie extends Food {
+  - yummy()
+  + cost()
+}
+
+class Cabbage extends Veggie {
+  - clean()
+  + cost()
+}
+
+class Lettuce extends Veggie {
+  -clean()
+  + cost()
+}
+
+class Tomato extends Veggie {
+  -clean()
+  + cost()
+}
+
+class Dairy extends Food{
+  - yummy()
+  + cost()
+}
+
+class Cheese extends Dairy{
+  -meltingPoint()
+  + cost()
+}
+
+class Milk extends Dairy{
+  -amount()
+  + cost()
+}
+
+
+
+Supplier --|> Distributor : sells to
+Distributor --|> Customer : sells to
+@enduml
