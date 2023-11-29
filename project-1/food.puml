@@ -1,80 +1,39 @@
 @startuml
+
 class Supplier {
-  + name: Saputo
-  + supplyFood() 
-  + netincome()
-  + sell()
+  - name()
+  - food() 
+  - profit()
+  - sell()
+  _construct()
+  get_Supplier_name()
+  get_Supplier_food()
+  get_Supplier_profit()
+  get_Supplier_sell()
 }
 
 class Distributor extends Supplier {
-  + name: Costco
-  + orderFood()
-  + distributeFood()
-  + netincome
+  - name()
+  - foodOrdered()
+  + foodSold()
+  - profit()
+  _construct()
+  get_Distributor_name()
+  get_Distributor_foodOrdered()
+  get_Distributor_foodSold()
+  get_profit()
 }
 
 class Food {
-  - yummy()
-  + cost()
+  - foodType()
+  - cost()
+  - distributor()
+  _construct()
+  get_Food_foodType()
+  get_Food_cost()
+  get_Food_distributor()
 }
 
-class Meat extends Food {
-  - yummy() 
-  + cost()
-}
-
-class Chicken extends Meat {
-  -yummy()
-  -cookingTemp()
-  + cost()
-}
-
-class Beef extends Meat {
-  -yummy()
-  -cookingTemp()
-  + cost()
-}
-
-class Pork extends Meat {
-  -yummy()
-  -cookingTemp()
-  + cost()
-}
-
-class Veggie extends Food {
-  - yummy()
-  + cost()
-}
-
-class Cabbage extends Veggie {
-  - clean()
-  + cost()
-}
-
-class Lettuce extends Veggie {
-  -clean()
-  + cost()
-}
-
-class Tomato extends Veggie {
-  -clean()
-  + cost()
-}
-
-class Dairy extends Food{
-  - yummy()
-  + cost()
-}
-
-class Cheese extends Dairy{
-  -meltingPoint()
-  + cost()
-}
-
-class Milk extends Dairy{
-  -amount()
-  + cost()
-}
 
 
 
