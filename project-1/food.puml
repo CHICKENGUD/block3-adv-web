@@ -24,7 +24,7 @@ class Distributor extends Supplier {
   get_profit()
 }
 
-class Food {
+class Food extends Distributor {
   - foodType()
   - cost()
   - distributor()
@@ -34,9 +34,21 @@ class Food {
   get_Food_distributor()
 }
 
-
+class Dishes extends Food {
+  - dishID()
+  -description()
+  +ingredients()
+  _construct()
+  get_Dishes_dishID()
+  get_Dishes_description()
+  get_Dishes_ingredients()
+}
 
 
 Supplier --|> Distributor : sells to
-Distributor --|> Customer : sells to
+
 @enduml
+
+' look at tables on gitgub
+' are there things missing?
+' 
