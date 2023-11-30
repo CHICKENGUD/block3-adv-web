@@ -1,0 +1,55 @@
+@startuml
+
+class Supplier {
+  - name()
+  - food() 
+  - profit()
+  - sell()
+  _construct()
+  get_Supplier_name()
+  get_Supplier_food()
+  get_Supplier_profit()
+  get_Supplier_sell()
+}
+
+class Distributor extends Supplier {
+  - name()
+  - foodOrdered()
+  + foodSold()
+  - profit()
+  _construct()
+  get_Distributor_name()
+  get_Distributor_foodOrdered()
+  get_Distributor_foodSold()
+  get_profit()
+}
+
+class Food extends Distributor {
+  - foodType()
+  - foodID()
+  - cost()
+  - distributor()
+  _construct()
+  get_Food_foodType()
+  get_Food_cost()
+  get_Food_distributor()
+}
+
+class Dishes extends Food {
+  - dishID()
+  -description()
+  +ingredients()
+  _construct()
+  get_Dishes_dishID()
+  get_Dishes_description()
+  get_Dishes_ingredients()
+}
+
+
+Supplier --|> Distributor : sells to
+
+@enduml
+
+' look at tables on gitgub
+' are there things missing?
+' 
